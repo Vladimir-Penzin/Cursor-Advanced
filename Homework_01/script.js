@@ -19,7 +19,7 @@ console.log("Загальна вартість з копійками : " + total
 let totalRoundedPrice = Math.floor(apple) + Math.floor(mango) + Math.floor(grape)
 console.log("Загальна вартість без копійок для кожної ціни : " + totalRoundedPrice)
 
-let totalHundredRoundedPrice = Math.ceil(totalAbsolutePrice / 100) * 100
+let totalHundredRoundedPrice = Math.round(totalAbsolutePrice / 100) * 100
 console.log("Загальна вартість з округленням до сотень : " + totalHundredRoundedPrice)
 
 console.log("Загальна вартість всіх товарів (без копійок) - " + Math.floor(totalAbsolutePrice) + " є парне число : " +!Boolean(Math.floor(totalAbsolutePrice) % 2))
