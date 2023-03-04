@@ -65,20 +65,44 @@ if (secondNum < 0) {
 console.log ("Оновлене друге число: " + secondNum)
 }
 
-alert ('Буде вираховуватися сума чисел у проміжку між ' + firstNum + ' та ' + secondNum + ' включно')
+if (firstNum < secondNum) {
+    alert ('Буде вираховуватися сума чисел у проміжку між ' + firstNum + ' та ' + secondNum + ' включно')
+} else {
+    alert ('Буде вираховуватися сума чисел у проміжку між ' + secondNum + ' та ' + firstNum + ' включно')
+}
+
+
 let message = confirm("Включати парні числа у додаванні?")
-for (l = firstNum; l <= secondNum; l++) {
-    if (message == false) {
-        if ((l + 2) % 2 === 0) {
-            amount = amount + 0
+
+if (firstNum < secondNum) {
+    for (l = firstNum; l <= secondNum; l++) {
+        if (message == false) {
+            if ((l + 2) % 2 === 0) {
+                amount = amount + 0
+            } else {
+                amount = amount + l
+            }
         } else {
             amount = amount + l
         }
-    } else {
-        amount = amount + l
+        
     }
-    
+} else {
+    for (l = secondNum; l <= firstNum; l++) {
+        if (message == false) {
+            if ((l + 2) % 2 === 0) {
+                amount = amount + 0
+            } else {
+                amount = amount + l
+            }
+        } else {
+            amount = amount + l
+        }
+        
+    }
 }
+
+
 
 if (message == true) {
     alert ('Сума всіх чисел дорівнює: ' + amount)
