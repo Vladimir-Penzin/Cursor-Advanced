@@ -72,13 +72,14 @@ function countLetter (letter, word) {
 
 function convertCurrency (amount) {
     let convertResult
+    amount = amount.toLowerCase()
     if (amount.indexOf("$") === -1 && amount.indexOf("uah") === -1) {
         return console.log("Валюта не визначена")
     } else if (amount.indexOf("$") >= 0) {
         convertResult = Number(amount.replaceAll("$", "")) * 37 + " грн"
         return convertResult
     } else if (amount.toLowerCase().indexOf("uah") >= 0) {
-        convertResult = Math.round((Number(amount.toLowerCase().replaceAll("uah", "")) / 37) * 100) / 100 + " $"
+        convertResult = Math.round((Number(amount.replaceAll("uah", "")) / 37) * 100) / 100 + " $"
         return convertResult
     }
 }
@@ -140,7 +141,7 @@ console.log("Функція №5. Повертає випадкове число
 const letterOne = "a"
 const wordOne = "ababagalamaga"
 console.log("Функція №6. Рахує, скільки разів повторюється буква '" + letterOne + "' у слові '" + wordOne + "'. Результат: " + countLetter(letterOne, wordOne))
-const currency = "10000uah"
+const currency = "UAH10000"
 console.log("Функція №7. Конвертує долар/гривню за актуальним курсом. Сума: " + currency.toUpperCase() + " буде сконвертована у " + convertCurrency(currency))
 const passLength = 6
 console.log("Функція №9. Генерує випадковий числовий пароль довжиною " + passLength + " символів. Результат: " + getRandomPassword(passLength))
