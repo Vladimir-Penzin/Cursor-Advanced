@@ -42,7 +42,7 @@ function nameAdjust (name) {
     return nameResult
 }
 
-const getSalary = (salary) => salary * 0.805 + "грн"
+const getSalary = (salary, tax = 19.5) => Math.round(salary * (1 - tax / 100)) + "грн"
 
 function getRandomNumber (N, M) {
     j = 0
@@ -134,7 +134,8 @@ console.log("Функція №2. Отримує результат зведен
 const myname = "volOdYmYr"
 console.log("Функція №3. Форматує ім'я '" + myname + "', роблячи першу букву великою. Результат: " + nameAdjust(myname))
 const cash = 4000
-console.log ("Функція №4. Вираховує суму, що залишається після оплати податку 19,5% від заробітньої плати у " + cash + "грн . Результат: " + getSalary(cash))
+const tax = 25
+console.log ("Функція №4. Вираховує суму, що залишається після оплати податку " + tax + "% від заробітньої плати у " + cash + "грн . Результат: " + getSalary(cash, tax))
 const firstNum = 7
 const secondNum = 120
 console.log("Функція №5. Повертає випадкове число у діапазоні між " + firstNum + " та " + secondNum + ". Результат: " + getRandomNumber(firstNum, secondNum))
