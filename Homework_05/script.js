@@ -40,7 +40,7 @@ function getModa(array) {
 
     for (i = 0; i < integersArray.length; i++) {
         const checkArray = integersArray.filter((item) => {   //create array of iterative elements
-            return item === array[i]
+            return item === integersArray[i]
         })
         if (checkArray.length > arrayLenght) {  //find first longest array of iterative elements and get first element of such array as final result
             arrayLenght = checkArray.length
