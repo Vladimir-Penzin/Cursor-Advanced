@@ -114,6 +114,6 @@ const calculateWordLetters = (word) => {
     return result
 }
 const wordToCalculate = "test"
-console.log("Function 6 (word for processing is '" + wordToCalculate + "' : ")
+console.log("Function 6: Word for processing is '" + wordToCalculate + "' : ")
 console.log(calculateWordLetters(wordToCalculate))
 
