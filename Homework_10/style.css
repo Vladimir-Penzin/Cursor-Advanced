@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./bk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.keyboard{
+    margin-top: 100px;
+    width: 800px;
+    height: 300px;
+    position: relative;
+}
+.black_keys{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    display: flex;
+}
+.pair_keys {
+    display: flex;
+    width: 218px;
+    justify-content: center;
+    gap: 20px;
+}
+.triple_keys {
+    display: flex;
+    width: 291px;
+    justify-content: center;
+    gap: 20px;
+}
+.white_keys{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.key-black {
+    background-color: black;
+    color: wheat;
+    width: 55px;
+    height: 180px;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.key-white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    width: 72px;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.active {
+    transform: scale(0.95) translateY(-5px);
+    box-shadow: 0 0 5px 5px rgb(207, 241, 55);
+}
