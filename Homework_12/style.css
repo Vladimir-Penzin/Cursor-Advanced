@@ -1,0 +1,130 @@
+@font-face {
+    font-family: starwars;
+    src: url(./Starjedi.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    padding-top: 5vh;
+    background: url(./img/space.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    /*height: 100vh;*/
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_title {
+    font-family: "starwars";
+    font-size: 36px;
+    color: black;
+    text-shadow: 0 0 5px yellow;
+    opacity: 0.8;
+}
+nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.search {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+#myInput {
+    background-color: white;
+    font-size: 20px;
+    width: 130px;
+    text-align: center;
+}
+#myInput::placeholder {
+    background-color: inherit;
+    font-size: 20px;
+    width: 130px;
+    text-align: center;
+}
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 4px yellow;
+    opacity: 0.9;
+    transition: all 0.3s ease-in;
+}
+.btn:hover{
+    box-shadow: 0 0 5px 5px white;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main {
+    width: 90%;
+    height: 100%;
+    margin: 40px auto;
+}
+.cards {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    max-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    position: relative;
+}
+.card_film:hover{
+    box-shadow: 0 0 7px 5px white;
+    transform: scale(0.97);
+    cursor: pointer;
+}
+.card_image{
+    max-height: 270px;
+}
+
+.card_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.card_text{
+    padding: 10px;
+}
+.card_wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
