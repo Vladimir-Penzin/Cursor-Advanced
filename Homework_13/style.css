@@ -1,0 +1,16 @@
+.id_result{
+    border: 1px solid black;
+    margin-left: 15px;
+    padding: 0 10px;
+}
+.buttons {
+    width: 100px;
+    display: inline-block;
+}
+.font_result{
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid black;
+    margin-left: 15px;
+    padding: 0 10px;
+}
